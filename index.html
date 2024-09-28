@@ -6,29 +6,52 @@
     <title>Trial Rooms to your Hands</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#FF6B6B',
-                    }
-                }
+    <style>
+        @media (max-width: 768px) {
+            .mobile-section {
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+            .mobile-section img {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto 1.5rem;
+            }
+            .mobile-section h1, .mobile-section h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            .mobile-section p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+            .mobile-section button {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+            .mobile-section ol, .mobile-section ul {
+                text-align: left;
+                padding-left: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .mobile-section .flex {
+                justify-content: center;
             }
         }
-    </script>
+    </style>
 </head>
 <body class="bg-black min-h-screen">
     <!-- Navbar -->
     <nav class="bg-white bg-opacity-20 backdrop-blur-lg shadow-lg fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
+                <!-- Logo and menu items on the left -->
                 <div class="flex items-center">
                     <a href="#" class="flex-shrink-0">
                         <img class="h-8 w-8" src="./assets/spotwik.png" alt="Logo">
                     </a>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-4">
+                    <div class="hidden md:block ml-10">
+                        <div class="flex items-baseline space-x-4">
                             <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium">Who We Are</a>
                             <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium">Lipsticks</a>
                             <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium">Jewellery</a>
@@ -37,57 +60,75 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-2 px-4 rounded">
+                
+                <!-- "TRY NOW!" button on the right -->
+                <div class="hidden md:block">
+                    <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-2 px-4 rounded-lg text-sm">
                         TRY NOW!
+                    </button>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
+    
 
     <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-16">
+    <main class="px-4 py-12 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center justify-between">
-            <!-- Left side content -->
-            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8 pl-8 sm:pl-6 lg:pl-8">
-                <h1 class="text-5xl font-bold text-white mb-4">Bringing Trial Rooms to your Hands</h1>
-                <p class="text-xl text-gray-300 mb-6">Leveraging AI & AR to Build the Future of Shopping!</p>
+            <!-- Mobile view -->
+            <div class="md:hidden mobile-section w-full">
+                <img src="./assets/model.png" alt="AR Shopping Experience" class="rounded-lg shadow-lg">
+                <h1 class="text-4xl font-bold text-white">Bringing Trial Rooms to your Hands</h1>
+                <p class="text-xl text-gray-300">Leveraging AI & AR to Build the Future of Shopping!</p>
                 <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg text-lg">
                     TRY NOW!
                 </button>
             </div>
             
-            <!-- Right side image -->
-            <div class="md:w-1/2">
-                <img src="./assets/model.png" alt="AR Shopping Experience" class="w-full md:w-[100%] lg:w-[100%] xl:w-[140%] max-w-none rounded-lg shadow-lg">
+            <!-- Desktop view (unchanged) -->
+            <div class="hidden md:flex md:flex-row items-center justify-between w-full">
+                <div class="md:w-1/2 md:pr-8">
+                    <h1 class="text-5xl font-bold text-white mb-4">Bringing Trial Rooms to your Hands</h1>
+                    <p class="text-xl text-gray-300 mb-6">Leveraging AI & AR to Build the Future of Shopping!</p>
+                    <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg text-lg">
+                        TRY NOW!
+                    </button>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="./assets/model.png" alt="AR Shopping Experience" class="w-full rounded-lg shadow-lg">
+                </div>
             </div>
         </div>
     </main>
 
     <!-- New Section -->
     <!-- Lipstick Try-On Section -->
-    <section class="bg-black py-16 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <!-- Images -->
-                <div class="md:w-1/2 relative mb-8 md:mb-0 pl-8">
-                    <img src="./assets/sec1.png" alt="Lipstick Try-On Collage" class="w-full rounded-lg shadow-lg">
-                    <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-50"></div>
-                </div>
-                <!-- Text Content -->
-                <div class="md:w-1/2 pl-16">
-                    <h2 class="text-5xl font-bold text-white mb-4">Lipstick Try-On</h2>
-                    <p class="text-2xl text-gray-300 mb-6">Discover Your Perfect Lip Shade Instantly</p>
+    <section class="bg-black py-12 md:py-16">
+        <div class="px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Mobile view (unchanged) -->
+                <div class="md:hidden mobile-section w-full">
+                    <img src="./assets/sec1.png" alt="Lipstick Try-On Collage" class="rounded-lg shadow-lg">
+                    <h2 class="text-4xl font-bold text-white">Lipstick Try-On</h2>
+                    <p class="text-xl text-gray-300">Discover Your Perfect Lip Shade Instantly</p>
                     <ol class="text-gray-300 mb-6 text-lg list-none">
                         <li class="mb-2">Test multiple lipstick shades in real-time</li>
                         <li class="mb-2">Find your ideal match with precision</li>
                         <li>No more guessing – see it on you!</li>
                     </ol>
-                    <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-8 rounded-lg text-xl hover:from-red-500 hover:to-pink-500 transition duration-300 mb-8">
+                    <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-8 rounded-lg text-xl hover:from-red-500 hover:to-pink-500 transition duration-300">
                         TRY NOW!
                     </button>
-                    <div class="flex items-center pl-[18rem]">
+                    <div class="flex items-center justify-center mt-8">
                         <span class="text-5xl font-bold text-white mr-2">01</span>
                         <span class="text-xl text-gray-400">/04</span>
                         <div class="flex ml-4">
@@ -95,6 +136,38 @@
                             <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
                             <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
                             <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop view (modified) -->
+                <div class="hidden md:flex md:flex-row items-center justify-between md:space-x-8">
+                    <!-- Image (moved to the left) -->
+                    <div class="md:w-1/2 relative mb-8 md:mb-0">
+                        <img src="./assets/sec1.png" alt="Lipstick Try-On Collage" class="w-full rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-l from-black via-transparent to-transparent opacity-50"></div>
+                    </div>
+                    <!-- Text Content -->
+                    <div class="md:w-1/2 pl-16">
+                        <h2 class="text-5xl font-bold text-white mb-4">Lipstick Try-On</h2>
+                        <p class="text-2xl text-gray-300 mb-6">Discover Your Perfect Lip Shade Instantly</p>
+                        <ol class="text-gray-300 mb-6 text-lg list-none">
+                            <li class="mb-2">Test multiple lipstick shades in real-time</li>
+                            <li class="mb-2">Find your ideal match with precision</li>
+                            <li>No more guessing – see it on you!</li>
+                        </ol>
+                        <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-8 rounded-lg text-xl hover:from-red-500 hover:to-pink-500 transition duration-300 mb-8">
+                            TRY NOW!
+                        </button>
+                        <div class="flex items-center pl-[18rem]">
+                            <span class="text-5xl font-bold text-white mr-2">01</span>
+                            <span class="text-xl text-gray-400">/04</span>
+                            <div class="flex ml-4">
+                                <div class="w-2 h-2 rounded-full bg-white mr-2"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -176,7 +249,32 @@
     <!-- Blush Try-On Section -->
     <section class="bg-black py-16 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between">
+            <!-- Mobile view -->
+            <div class="md:hidden mobile-section w-full">
+                <img src="./assets/sec4.png" alt="Blush Try-On" class="rounded-lg shadow-lg">
+                <h2 class="text-4xl font-bold text-white">Blush Try-On</h2>
+                <p class="text-xl text-gray-300"><em>Find the Perfect Blush for Every Look</em></p>
+                <ul class="text-gray-300 mb-6 text-lg list-disc list-inside">
+                    <li class="mb-2">Choose the right blush for every makeup style.</li>
+                    <li>See how each shade enhances your natural glow before buying.</li>
+                </ul>
+                <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-8 rounded-lg text-xl hover:from-red-500 hover:to-pink-500 transition duration-300">
+                    TRY NOW!
+                </button>
+                <div class="flex items-center justify-center mt-8">
+                    <span class="text-5xl font-bold text-white mr-2">04</span>
+                    <span class="text-xl text-gray-400">/04</span>
+                    <div class="flex ml-4">
+                        <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
+                        <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
+                        <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
+                        <div class="w-2 h-2 rounded-full bg-white"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop view (unchanged) -->
+            <div class="hidden md:flex md:flex-row items-center justify-between">
                 <!-- Text Content -->
                 <div class="md:w-1/2 pl-16">
                     <h2 class="text-5xl font-bold text-white mb-4">Blush Try-On</h2>
