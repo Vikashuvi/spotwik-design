@@ -7,36 +7,33 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @media (max-width: 768px) {
-            .mobile-section {
-                text-align: center;
-                padding: 2rem 1rem;
+        @keyframes aurora {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
             }
-            .mobile-section img {
-                width: 100%;
-                max-width: 300px;
-                margin: 0 auto 1.5rem;
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
             }
-            .mobile-section h1, .mobile-section h2 {
-                font-size: 2rem;
-                margin-bottom: 1rem;
-            }
-            .mobile-section p {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
-            .mobile-section button {
-                width: 100%;
-                margin-bottom: 1.5rem;
-            }
-            .mobile-section ol, .mobile-section ul {
-                text-align: left;
-                padding-left: 1.5rem;
-                margin-bottom: 1.5rem;
-            }
-            .mobile-section .flex {
-                justify-content: center;
-            }
+        }
+        .aurora-container {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: 50%;
+            left: 50%;
+            background: 
+                radial-gradient(ellipse at center, transparent 0%, #000000 70%),
+                conic-gradient(
+                    from 0deg at 50% 50%,
+                    #4B0082 0deg,
+                    transparent 60deg,
+                    transparent 300deg,
+                    #008080 300deg,
+                    transparent 360deg
+                );
+            filter: blur(30px);
+            opacity: 0.7;
+            animation: aurora 20s linear infinite;
         }
     </style>
 </head>
@@ -82,29 +79,37 @@
     
 
     <!-- Main Content -->
-    <main class="px-4 py-12 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <!-- Mobile view -->
-            <div class="md:hidden mobile-section w-full">
-                <img src="./assets/model.png" alt="AR Shopping Experience" class="rounded-lg shadow-lg">
-                <h1 class="text-4xl font-bold text-white">Bringing Trial Rooms to your Hands</h1>
-                <p class="text-xl text-gray-300">Leveraging AI & AR to Build the Future of Shopping!</p>
-                <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg text-lg">
-                    TRY NOW!
-                </button>
-            </div>
-            
-            <!-- Desktop view (unchanged) -->
-            <div class="hidden md:flex md:flex-row items-center justify-between w-full">
-                <div class="md:w-1/2 md:pr-8">
-                    <h1 class="text-5xl font-bold text-white mb-4">Bringing Trial Rooms to your Hands</h1>
-                    <p class="text-xl text-gray-300 mb-6">Leveraging AI & AR to Build the Future of Shopping!</p>
+    <main class="px-4 py-12 sm:px-6 lg:px-8 relative overflow-hidden">
+        <!-- Aurora effect container -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="aurora-container"></div>
+        </div>
+        
+        <!-- Existing content -->
+        <div class="relative z-10 rounded-lg p-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <!-- Mobile view -->
+                <div class="md:hidden mobile-section w-full">
+                    <img src="./assets/model.png" alt="AR Shopping Experience" class="rounded-lg shadow-lg">
+                    <h1 class="text-4xl font-bold text-white">Bringing Trial Rooms to your Hands</h1>
+                    <p class="text-xl text-gray-300">Leveraging AI & AR to Build the Future of Shopping!</p>
                     <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg text-lg">
                         TRY NOW!
                     </button>
                 </div>
-                <div class="md:w-1/2">
-                    <img src="./assets/model.png" alt="AR Shopping Experience" class="w-full rounded-lg shadow-lg">
+                
+                <!-- Desktop view (unchanged) -->
+                <div class="hidden md:flex md:flex-row items-center justify-between w-full">
+                    <div class="md:w-1/2 md:pr-8">
+                        <h1 class="text-5xl font-bold text-white mb-4">Bringing Trial Rooms to your Hands</h1>
+                        <p class="text-xl text-gray-300 mb-6">Leveraging AI & AR to Build the Future of Shopping!</p>
+                        <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg text-lg">
+                            TRY NOW!
+                        </button>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="./assets/model.png" alt="AR Shopping Experience" class="w-full rounded-lg shadow-lg">
+                    </div>
                 </div>
             </div>
         </div>
@@ -159,7 +164,7 @@
                         <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-8 rounded-lg text-xl hover:from-red-500 hover:to-pink-500 transition duration-300 mb-8">
                             TRY NOW!
                         </button>
-                        <div class="flex items-center pl-[18rem]">
+                        <div class="flex items-center pl-[12rem]">
                             <span class="text-5xl font-bold text-white mr-2">01</span>
                             <span class="text-xl text-gray-400">/04</span>
                             <div class="flex ml-4">
@@ -179,24 +184,20 @@
     <section class="bg-black py-16 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row-reverse items-center justify-between md:space-x-reverse md:space-x-8">
-                <!-- Image -->
-                <div class="md:w-1/2 relative mb-8 md:mb-0">
-                    <img src="./assets/sec2.png" alt="Jewellery Try-On Experience" class="w-full rounded-lg shadow-lg">
-                    <div class="absolute inset-0 bg-gradient-to-l from-black via-transparent to-transparent opacity-50"></div>
-                </div>
-                <!-- Text Content -->
-                <div class="md:w-1/2 pl-8">
-                    <h2 class="text-5xl font-bold text-white mb-4">Jewellery Try-On</h2>
-                    <p class="text-2xl text-gray-300 mb-6">Find the Right Bling for Every Occasion</p>
-                    <ol class="text-gray-300 mb-6 text-lg list-none">
+                <!-- Mobile view -->
+                <div class="md:hidden mobile-section w-full text-center">
+                    <img src="./assets/sec2.png" alt="Jewellery Try-On Experience" class="w-full rounded-lg shadow-lg mb-6">
+                    <h2 class="text-4xl font-bold text-white mb-4">Jewellery Try-On</h2>
+                    <p class="text-xl text-gray-300 mb-6">Find the Right Bling for Every Occasion</p>
+                    <ul class="text-gray-300 mb-6 text-lg list-none">
                         <li class="mb-2">Try on necklaces, earrings, and rings in seconds</li>
                         <li class="mb-2">See how different styles complement your look</li>
                         <li>Virtual try-on without stepping into a store</li>
-                    </ol>
+                    </ul>
                     <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-8 rounded-lg text-xl hover:from-red-500 hover:to-pink-500 transition duration-300 mb-8">
                         TRY NOW!
                     </button>
-                    <div class="flex items-center pt-6">
+                    <div class="flex items-center justify-center">
                         <span class="text-5xl font-bold text-white mr-2">02</span>
                         <span class="text-xl text-gray-400">/04</span>
                         <div class="flex ml-4">
@@ -207,6 +208,38 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Desktop view (unchanged) -->
+                <div class="hidden md:flex md:flex-row-reverse items-center justify-between md:space-x-reverse md:space-x-8">
+                    <!-- Image -->
+                    <div class="md:w-1/2 relative mb-8 md:mb-0">
+                        <img src="./assets/sec2.png" alt="Jewellery Try-On Experience" class="w-full rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-l from-black via-transparent to-transparent opacity-50"></div>
+                    </div>
+                    <!-- Text Content -->
+                    <div class="md:w-1/2 pl-8">
+                        <h2 class="text-5xl font-bold text-white mb-4">Jewellery Try-On</h2>
+                        <p class="text-2xl text-gray-300 mb-6">Find the Right Bling for Every Occasion</p>
+                        <ol class="text-gray-300 mb-6 text-lg list-none">
+                            <li class="mb-2">Try on necklaces, earrings, and rings in seconds</li>
+                            <li class="mb-2">See how different styles complement your look</li>
+                            <li>Virtual try-on without stepping into a store</li>
+                        </ol>
+                        <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-8 rounded-lg text-xl hover:from-red-500 hover:to-pink-500 transition duration-300 mb-8">
+                            TRY NOW!
+                        </button>
+                        <div class="flex items-center pt-6">
+                            <span class="text-5xl font-bold text-white mr-2">02</span>
+                            <span class="text-xl text-gray-400">/04</span>
+                            <div class="flex ml-4">
+                                <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
+                                <div class="w-2 h-2 rounded-full bg-white mr-2"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -214,7 +247,32 @@
     <!-- Foundation Shades Try-On Section -->
     <section class="bg-black py-16 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between">
+            <!-- Mobile view -->
+            <div class="md:hidden mobile-section w-full text-center">
+                <img src="./assets/sec3.png" alt="Foundation Shades Try-On" class="w-full rounded-lg shadow-lg mb-6">
+                <h2 class="text-4xl font-bold text-white mb-4">Foundation Shades Try-On</h2>
+                <p class="text-xl text-gray-300 mb-6"><em>Flawless Foundation, No More Guesswork</em></p>
+                <ul class="text-gray-300 mb-6 text-lg list-none">
+                    <li class="mb-2">Match foundation shades to your skin tone instantly.</li>
+                    <li>Say goodbye to returns and wrong purchases.</li>
+                </ul>
+                <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-8 rounded-lg text-xl hover:from-red-500 hover:to-pink-500 transition duration-300 mb-8">
+                    TRY NOW!
+                </button>
+                <div class="flex items-center justify-center">
+                    <span class="text-5xl font-bold text-white mr-2">03</span>
+                    <span class="text-xl text-gray-400">/04</span>
+                    <div class="flex ml-4">
+                        <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
+                        <div class="w-2 h-2 rounded-full bg-gray-600 mr-2"></div>
+                        <div class="w-2 h-2 rounded-full bg-white mr-2"></div>
+                        <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop view (unchanged) -->
+            <div class="hidden md:flex md:flex-row items-center justify-between">
                 <!-- Image -->
                 <div class="md:w-1/2 relative mb-8 md:mb-0 pl-8">
                     <img src="./assets/sec3.png" alt="Foundation Shades Try-On" class="w-full rounded-lg shadow-lg">
@@ -231,7 +289,7 @@
                     <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 px-8 rounded-lg text-xl hover:from-red-500 hover:to-pink-500 transition duration-300 mb-8">
                         TRY NOW!
                     </button>
-                    <div class="flex items-center pl-[18rem]">
+                    <div class="flex items-center pl-[12rem]">
                         <span class="text-5xl font-bold text-white mr-2">03</span>
                         <span class="text-xl text-gray-400">/04</span>
                         <div class="flex ml-4">

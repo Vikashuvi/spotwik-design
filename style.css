@@ -2,21 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.double-circle {
-    position: relative;
-    width: 12px;
-    height: 12px;
-    border: 2px solid white;
-    border-radius: 50%;
-}
-.double-circle::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 4px;
-    height: 4px;
-    background-color: white;
-    border-radius: 50%;
+@media (max-width: 768px) {
+    .mobile-section {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    .mobile-section img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 1.5rem;
+    }
+    .mobile-section h1, .mobile-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .mobile-section p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .mobile-section button {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .mobile-section ol, .mobile-section ul {
+        text-align: left;
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .mobile-section .flex {
+        justify-content: center;
+    }
 }
