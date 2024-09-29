@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+nav,
+    h1, h2, h3, h4, h5, h6,
+    .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl {
+        font-family: 'League Spartan', sans-serif;
+    }
+
+    /* Optionally, you can set it as the default font for the entire body */
+    body {
+        font-family: 'League Spartan', sans-serif;
+    }
+
+    
 @media (max-width: 768px) {
     .mobile-section {
         text-align: center;
@@ -32,4 +44,54 @@
     .mobile-section .flex {
         justify-content: center;
     }
+}
+
+@layer components {
+    .custom-button {
+      @apply bg-gradient-to-r from-[#FF8C00] to-[#FF1493] text-white font-bold py-3 px-6 rounded-lg text-lg uppercase tracking-wide shadow-md transition-all duration-300 ease-in-out;
+    }
+  
+    .custom-button:hover {
+      @apply transform -translate-y-1 shadow-lg;
+    }
+  
+    .custom-button:active {
+      @apply transform translate-y-0.5;
+    }
+  }
+
+.custom-button, 
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  background: linear-gradient(to right, #FF8C00, #FF1493);
+  color: white;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.custom-button:hover, 
+button:hover,
+[type='button']:hover,
+[type='reset']:hover,
+[type='submit']:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:active, 
+button:active,
+[type='button']:active,
+[type='reset']:active,
+[type='submit']:active {
+  transform: translateY(1px);
 }
