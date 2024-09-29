@@ -1,7 +1,8 @@
 module.exports = {
-  content: [
-    "./src/**/*.{html,js}",
-    "./style.css",
+  purge: [
+    './src/**/*.html',
+    './src/**/*.js',
+    './src/**/*.css', // Add this line if it's not already there
   ],
-  // ... other configurations
+  // ... rest of your Tailwind config
 }

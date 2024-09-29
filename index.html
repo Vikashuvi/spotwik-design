@@ -32,18 +32,54 @@
                 
                 <!-- "TRY NOW!" button on the right -->
                 <div class="hidden md:block">
-                    <button class="custom-button">
-                        TRY NOW!
-                    </button>
+                    <div class="relative inline-block">
+                        <!-- Main button -->
+                        <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                            <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                        </div>
+                        <!-- Top white border -->
+                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                        <!-- Left white border -->
+                        <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                        <!-- Bottom shadow layers -->
+                        <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                        <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                    </div>
                 </div>
                 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button class="text-white focus:outline-none">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg>
                     </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Who We Are</a>
+                <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Lipsticks</a>
+                <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Jewellery</a>
+                <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Foundation Shades</a>
+                <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Blush</a>
+            </div>
+            <div class="px-2 pt-2 pb-3">
+                <div class="relative inline-block w-full">
+                    <!-- Main button -->
+                    <div class="w-full h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                        <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                    </div>
+                    <!-- Top white border -->
+                    <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                    <!-- Left white border -->
+                    <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                    <!-- Bottom shadow layers -->
+                    <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                    <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
                 </div>
             </div>
         </div>
@@ -61,9 +97,19 @@
                         <img src="./assets/model.png" alt="AR Shopping Experience" class="rounded-lg shadow-lg">
                         <h1 class="text-xl font-bold text-white">Bringing Trial Rooms to your Hands</h1>
                         <p class="text-xl text-gray-300">Leveraging AI & AR to Build the Future of Shopping!</p>
-                        <button class="custom-button">
-                            TRY NOW!
-                        </button>
+                        <div class="relative inline-block">
+                            <!-- Main button -->
+                            <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                                <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                            </div>
+                            <!-- Top white border -->
+                            <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                            <!-- Left white border -->
+                            <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                            <!-- Bottom shadow layers -->
+                            <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                            <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                        </div>
                     </div>
                     
                     <!-- Desktop view (unchanged) -->
@@ -71,9 +117,19 @@
                         <div class="md:w-1/2 md:pr-8">
                             <h1 class="text-5xl font-bold text-white mb-4">Bringing Trial Rooms to your Hands</h1>
                             <p class="text-xl text-gray-300 mb-6">Leveraging AI & AR to Build the Future of Shopping!</p>
-                            <button class="custom-button">
-                                TRY NOW!
-                            </button>
+                            <div class="relative inline-block">
+                                <!-- Main button -->
+                                <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                                    <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                                </div>
+                                <!-- Top white border -->
+                                <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                                <!-- Left white border -->
+                                <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                                <!-- Bottom shadow layers -->
+                                <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                                <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                            </div>
                         </div>
                         <div class="md:w-1/2">
                             <img src="./assets/model.png" alt="AR Shopping Experience" class="w-full rounded-lg shadow-lg">
@@ -99,9 +155,19 @@
                         <li class="mb-2">Find your ideal match with precision</li>
                         <li>No more guessing – see it on you!</li>
                     </ol>
-                    <button class="custom-button">
-                        TRY NOW!
-                    </button>
+                    <div class="relative inline-block">
+                        <!-- Main button -->
+                        <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                            <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                        </div>
+                        <!-- Top white border -->
+                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                        <!-- Left white border -->
+                        <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                        <!-- Bottom shadow layers -->
+                        <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                        <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                    </div>
                     <div class="flex items-center justify-center mt-8">
                         <span class="text-5xl font-bold text-white mr-2">01</span>
                         <span class="text-xl text-gray-400">/04</span>
@@ -130,9 +196,19 @@
                             <li class="mb-2">Find your ideal match with precision</li>
                             <li>No more guessing – see it on you!</li>
                         </ol>
-                        <button class="custom-button">
-                            TRY NOW!
-                        </button>
+                        <div class="relative inline-block">
+                            <!-- Main button -->
+                            <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                                <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                            </div>
+                            <!-- Top white border -->
+                            <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                            <!-- Left white border -->
+                            <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                            <!-- Bottom shadow layers -->
+                            <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                            <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                        </div>
                         <div class="flex items-center pl-[12rem]">
                             <span class="text-5xl font-bold text-white mr-2">01</span>
                             <span class="text-xl text-gray-400">/04</span>
@@ -163,10 +239,20 @@
                         <li class="mb-2">See how different styles complement your look</li>
                         <li>Virtual try-on without stepping into a store</li>
                     </ul>
-                    <button class="custom-button">
-                        TRY NOW!
-                    </button>
-                    <div class="flex items-center justify-center">
+                    <div class="relative inline-block">
+                        <!-- Main button -->
+                        <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                            <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                        </div>
+                        <!-- Top white border -->
+                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                        <!-- Left white border -->
+                        <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                        <!-- Bottom shadow layers -->
+                        <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                        <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                    </div>
+                    <div class="flex items-center justify-center mt-6">
                         <span class="text-5xl font-bold text-white mr-2">02</span>
                         <span class="text-xl text-gray-400">/04</span>
                         <div class="flex ml-4">
@@ -194,10 +280,20 @@
                             <li class="mb-2">See how different styles complement your look</li>
                             <li>Virtual try-on without stepping into a store</li>
                         </ol>
-                        <button class="custom-button">
-                            TRY NOW!
-                        </button>
-                        <div class="flex items-center pt-6">
+                        <div class="relative inline-block">
+                            <!-- Main button -->
+                            <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                                <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                            </div>
+                            <!-- Top white border -->
+                            <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                            <!-- Left white border -->
+                            <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                            <!-- Bottom shadow layers -->
+                            <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                            <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                        </div>
+                        <div class="flex items-center mt-6">
                             <span class="text-5xl font-bold text-white mr-2">02</span>
                             <span class="text-xl text-gray-400">/04</span>
                             <div class="flex ml-4">
@@ -225,10 +321,20 @@
                     <li class="mb-2">Match foundation shades to your skin tone instantly.</li>
                     <li>Say goodbye to returns and wrong purchases.</li>
                 </ul>
-                <button class="custom-button">
-                    TRY NOW!
-                </button>
-                <div class="flex items-center justify-center">
+                <div class="relative inline-block">
+                    <!-- Main button -->
+                    <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                        <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                    </div>
+                    <!-- Top white border -->
+                    <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                    <!-- Left white border -->
+                    <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                    <!-- Bottom shadow layers -->
+                    <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                    <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                </div>
+                <div class="flex items-center justify-center mt-6">
                     <span class="text-5xl font-bold text-white mr-2">03</span>
                     <span class="text-xl text-gray-400">/04</span>
                     <div class="flex ml-4">
@@ -255,9 +361,19 @@
                         <li class="mb-2">Match foundation shades to your skin tone instantly.</li>
                         <li>Say goodbye to returns and wrong purchases.</li>
                     </ul>
-                    <button class="custom-button">
-                        TRY NOW!
-                    </button>
+                    <div class="relative inline-block">
+                        <!-- Main button -->
+                        <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                            <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                        </div>
+                        <!-- Top white border -->
+                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                        <!-- Left white border -->
+                        <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                        <!-- Bottom shadow layers -->
+                        <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                        <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                    </div>
                     <div class="flex items-center pl-[12rem]">
                         <span class="text-5xl font-bold text-white mr-2">03</span>
                         <span class="text-xl text-gray-400">/04</span>
@@ -285,9 +401,19 @@
                     <li class="mb-2">Choose the right blush for every makeup style.</li>
                     <li>See how each shade enhances your natural glow before buying.</li>
                 </ul>
-                <button class="custom-button">
-                    TRY NOW!
-                </button>
+                <div class="relative inline-block">
+                    <!-- Main button -->
+                    <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                        <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                    </div>
+                    <!-- Top white border -->
+                    <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                    <!-- Left white border -->
+                    <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                    <!-- Bottom shadow layers -->
+                    <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                    <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                </div>
                 <div class="flex items-center justify-center mt-8">
                     <span class="text-5xl font-bold text-white mr-2">04</span>
                     <span class="text-xl text-gray-400">/04</span>
@@ -310,10 +436,20 @@
                         <li class="mb-2">Choose the right blush for every makeup style.</li>
                         <li>See how each shade enhances your natural glow before buying.</li>
                     </ul>
-                    <button class="custom-button">
-                        TRY NOW!
-                    </button>
-                    <div class="flex items-center">
+                    <div class="relative inline-block">
+                        <!-- Main button -->
+                        <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
+                            <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
+                        </div>
+                        <!-- Top white border -->
+                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
+                        <!-- Left white border -->
+                        <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
+                        <!-- Bottom shadow layers -->
+                        <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
+                        <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                    </div>
+                    <div class="flex items-center mt-6">
                         <span class="text-5xl font-bold text-white mr-2">04</span>
                         <span class="text-xl text-gray-400">/04</span>
                         <div class="flex ml-4">
@@ -333,5 +469,15 @@
         </div>
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
 </body>
 </html>

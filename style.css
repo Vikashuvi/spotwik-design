@@ -60,38 +60,52 @@ nav,
     }
   }
 
-.custom-button, 
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  background: linear-gradient(to right, #FF8C00, #FF1493);
+button {
+  background: linear-gradient(to right, #FF6B00, #FF009E);
   color: white;
   font-family: 'League Spartan', sans-serif;
   font-weight: bold;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.1s ease;
 }
 
-.custom-button:hover, 
-button:hover,
-[type='button']:hover,
-[type='reset']:hover,
-[type='submit']:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+button:hover {
+  transform: scale(1.05);
 }
 
-.custom-button:active, 
-button:active,
-[type='button']:active,
-[type='reset']:active,
-[type='submit']:active {
-  transform: translateY(1px);
+button:active {
+  transform: scale(0.95);
 }
+
+.custom-button,
+button.custom-button {
+  background: linear-gradient(to right, #FF6B00, #FF009E);
+  color: white;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.custom-button:hover,
+button.custom-button:hover {
+  transform: scale(1.05);
+}
+
+.custom-button:active,
+button.custom-button:active {
+  transform: scale(0.95);
+}
+
