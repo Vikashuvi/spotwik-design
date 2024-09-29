@@ -180,3 +180,31 @@ button.custom-button:active {
 .mobile-nav-item:hover {
     color: #ec4899; /* Tailwind's pink-500 */
 }
+
+/* Add this to your existing CSS */
+
+.nav-item {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-item.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Remove this rule to keep text color consistent */
+/* .nav-item.active {
+    color: #FF6B00;
+} */

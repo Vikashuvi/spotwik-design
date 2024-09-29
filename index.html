@@ -22,11 +22,11 @@
                     </a>
                     <div class="hidden md:block ml-10">
                         <div class="flex items-center mt-2 space-x-4">
-                            <a href="#who-we-are" class="nav-item text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Who We Are</a>
-                            <a href="#lipsticks" class="nav-item text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Lipsticks</a>
-                            <a href="#jewellery" class="nav-item text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Jewellery</a>
-                            <a href="#foundation-shades" class="nav-item text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Foundation Shades</a>
-                            <a href="#blush" class="nav-item text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Blush</a>
+                            <a href="#who-we-are" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative">Who We Are</a>
+                            <a href="#lipsticks" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative">Lipsticks</a>
+                            <a href="#jewellery" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative">Jewellery</a>
+                            <a href="#foundation-shades" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative">Foundation Shades</a>
+                            <a href="#blush" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative">Blush</a>
                         </div>
                     </div>
                 </div>
@@ -439,6 +439,33 @@
         </div>
     </section>
 
-    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        function setActiveNavItem() {
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').slice(1) === currentSection) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', setActiveNavItem);
+        setActiveNavItem(); // Call once on load
+    });
+    </script>
+
 </body>
 </html>
