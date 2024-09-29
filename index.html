@@ -6,6 +6,7 @@
     <title>Trial Rooms to your Hands</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     
 </head>
@@ -21,11 +22,11 @@
                     </a>
                     <div class="hidden md:block ml-10">
                         <div class="flex items-center mt-2 space-x-4">
-                            <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium">Who We Are</a>
-                            <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium">Lipsticks</a>
-                            <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium">Jewellery</a>
-                            <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium">Foundation Shades</a>
-                            <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium">Blush</a>
+                            <a href="#who-we-are" class="nav-item text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium relative">Who We Are</a>
+                            <a href="#lipsticks" class="nav-item text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium relative">Lipsticks</a>
+                            <a href="#jewellery" class="nav-item text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium relative">Jewellery</a>
+                            <a href="#foundation-shades" class="nav-item text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium relative">Foundation Shades</a>
+                            <a href="#blush" class="nav-item text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium relative">Blush</a>
                         </div>
                     </div>
                 </div>
@@ -61,11 +62,11 @@
         <!-- Mobile menu, show/hide based on menu state -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Who We Are</a>
-                <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Lipsticks</a>
-                <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Jewellery</a>
-                <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Foundation Shades</a>
-                <a href="#" class="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Blush</a>
+                <a href="#who-we-are" class="nav-item text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Who We Are</a>
+                <a href="#lipsticks" class="nav-item text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Lipsticks</a>
+                <a href="#jewellery" class="nav-item text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Jewellery</a>
+                <a href="#foundation-shades" class="nav-item text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Foundation Shades</a>
+                <a href="#blush" class="nav-item text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Blush</a>
             </div>
             <div class="px-2 pt-2 pb-3">
                 <div class="relative inline-block w-full">
@@ -84,16 +85,15 @@
             </div>
         </div>
     </nav>
-    
 
     <!-- Main Content -->
-    <main class="relative overflow-hidden">
+    <section id="who-we-are" class="relative overflow-hidden">
         <div class="content-wrapper">
             <!-- Existing content -->
             <div class="relative z-10 rounded-lg p-8">
                 <div class="flex flex-col md:flex-row items-center justify-between">
                     <!-- Mobile view -->
-                    <div class="md:hidden mobile-section w-full">
+                    <div class="md:hidden mobile-section w-full mt-16">
                         <img src="./assets/model.png" alt="AR Shopping Experience" class="rounded-lg shadow-lg">
                         <h1 class="text-xl font-bold text-white">Bringing Trial Rooms to your Hands</h1>
                         <p class="text-xl text-gray-300">Leveraging AI & AR to Build the Future of Shopping!</p>
@@ -138,23 +138,22 @@
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
     <!-- New Section -->
     <!-- Lipstick Try-On Section -->
-    <section class="bg-black py-12 md:py-16 lipstick-section">
+    <section id="lipsticks" class="bg-black py-12 md:py-16 lipstick-section">
         <div class="lipstick-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center">
                 <!-- Mobile view (unchanged) -->
-                <div class="md:hidden mobile-section w-full">
-                    <img src="./assets/sec1.png" alt="Lipstick Try-On Collage" class="rounded-lg shadow-lg">
-                    <h2 class="text-4xl font-bold text-white">Lipstick Try-On</h2>
+                <div class="md:hidden mobile-section w-full text-center">
+                    <img src="./assets/sec1.png" alt="Lipstick Try-On Collage" class="rounded-lg shadow-lg mx-auto">
+                    <h2 class="text-4xl font-bold text-white mt-6">Lipstick Try-On</h2>
                     <p class="text-xl text-gray-300">Discover Your Perfect Lip Shade Instantly</p>
-                    <ol class="text-gray-300 mb-6 text-lg list-none">
-                        <li class="mb-2">Test multiple lipstick shades in real-time</li>
-                        <li class="mb-2">Find your ideal match with precision</li>
-                        <li>No more guessing – see it on you!</li>
-                    </ol>
+                    <ul class="text-gray-300 mb-6 text-lg list-none">
+                        <li class="mb-2">Test number of lipstick shades in real-time.</li>
+                        <li>No more guessing – find your ideal match with precision.</li>
+                    </ul>
                     <div class="relative inline-block">
                         <!-- Main button -->
                         <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
@@ -191,11 +190,10 @@
                     <div class="md:w-1/2 pl-16">
                         <h2 class="text-5xl font-bold text-white mb-4">Lipstick Try-On</h2>
                         <p class="text-2xl text-gray-300 mb-6">Discover Your Perfect Lip Shade Instantly</p>
-                        <ol class="text-gray-300 mb-6 text-lg list-none">
-                            <li class="mb-2">Test multiple lipstick shades in real-time</li>
-                            <li class="mb-2">Find your ideal match with precision</li>
-                            <li>No more guessing – see it on you!</li>
-                        </ol>
+                        <ul class="text-gray-300 mb-6 text-lg list-none">
+                            <li class="mb-2">Test number of lipstick shades in real-time.</li>
+                            <li>No more guessing – find your ideal match with precision.</li>
+                        </ul>
                         <div class="relative inline-block">
                             <!-- Main button -->
                             <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
@@ -226,31 +224,24 @@
     </section>
 
     <!-- Jewellery Try-On Section -->
-    <section class="bg-black py-16 relative">
+    <section id="jewellery" class="bg-black py-16 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row-reverse items-center justify-between md:space-x-reverse md:space-x-8">
                 <!-- Mobile view -->
                 <div class="md:hidden mobile-section w-full text-center">
-                    <img src="./assets/sec2.png" alt="Jewellery Try-On Experience" class="w-full rounded-lg shadow-lg mb-6">
+                    <img src="./assets/sec2.png" alt="Jewellery Try-On Experience" class="w-full rounded-lg shadow-lg mb-6 mx-auto">
                     <h2 class="text-4xl font-bold text-white mb-4">Jewellery Try-On</h2>
                     <p class="text-xl text-gray-300 mb-6">Find the Right Bling for Every Occasion</p>
                     <ul class="text-gray-300 mb-6 text-lg list-none">
-                        <li class="mb-2">Try on necklaces, earrings, and rings in seconds</li>
-                        <li class="mb-2">See how different styles complement your look</li>
-                        <li>Virtual try-on without stepping into a store</li>
+                        <li class="mb-2">Try on necklaces, earrings, and more in seconds.</li>
+                        <li>See how different styles complement your look without stepping into a store.</li>
                     </ul>
                     <div class="relative inline-block">
                         <!-- Main button -->
                         <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
                             <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
                         </div>
-                        <!-- Top white border -->
-                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                        <!-- Left white border -->
-                        <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                        <!-- Bottom shadow layers -->
-                        <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                        <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                        <!-- Button styling details... -->
                     </div>
                     <div class="flex items-center justify-center mt-6">
                         <span class="text-5xl font-bold text-white mr-2">02</span>
@@ -264,7 +255,7 @@
                     </div>
                 </div>
                 
-                <!-- Desktop view (unchanged) -->
+                <!-- Desktop view -->
                 <div class="hidden md:flex md:flex-row-reverse items-center justify-between md:space-x-reverse md:space-x-8">
                     <!-- Image -->
                     <div class="md:w-1/2 relative mb-8 md:mb-0">
@@ -275,23 +266,16 @@
                     <div class="md:w-1/2 pl-8">
                         <h2 class="text-5xl font-bold text-white mb-4">Jewellery Try-On</h2>
                         <p class="text-2xl text-gray-300 mb-6">Find the Right Bling for Every Occasion</p>
-                        <ol class="text-gray-300 mb-6 text-lg list-none">
-                            <li class="mb-2">Try on necklaces, earrings, and rings in seconds</li>
-                            <li class="mb-2">See how different styles complement your look</li>
-                            <li>Virtual try-on without stepping into a store</li>
-                        </ol>
+                        <ul class="text-gray-300 mb-6 text-lg list-none">
+                            <li class="mb-2">Try on necklaces, earrings, and more in seconds.</li>
+                            <li>See how different styles complement your look without stepping into a store.</li>
+                        </ul>
                         <div class="relative inline-block">
                             <!-- Main button -->
                             <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
                                 <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
                             </div>
-                            <!-- Top white border -->
-                            <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                            <!-- Left white border -->
-                            <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                            <!-- Bottom shadow layers -->
-                            <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                            <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+                            <!-- Button styling details... -->
                         </div>
                         <div class="flex items-center mt-6">
                             <span class="text-5xl font-bold text-white mr-2">02</span>
@@ -310,7 +294,7 @@
     </section>
 
     <!-- Foundation Shades Try-On Section -->
-    <section class="bg-black py-16 relative">
+    <section id="foundation-shades" class="bg-black py-16 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Mobile view -->
             <div class="md:hidden mobile-section w-full text-center">
@@ -390,7 +374,7 @@
     </section>
 
     <!-- Blush Try-On Section -->
-    <section class="bg-black py-16 relative">
+    <section id="blush" class="bg-black py-16 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Mobile view -->
             <div class="md:hidden mobile-section w-full">
@@ -479,5 +463,26 @@
             });
         });
     </script>
+
+    <!-- Add this style to your existing <style> tag or CSS file -->
+    <style>
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .nav-item.active::after {
+            width: 100%;
+        }
+    </style>
+
+    <!-- Add this script to the end of your body tag -->
+    
 </body>
 </html>
