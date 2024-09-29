@@ -12,7 +12,7 @@
 </head>
 <body class="bg-black min-h-screen">
     <!-- Navbar -->
-    <nav class="bg-white bg-opacity-20 backdrop-blur-lg shadow-lg fixed top-0 left-0 right-0 z-50">
+    <nav class="bg-black shadow-lg fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo and menu items on the left -->
@@ -22,11 +22,11 @@
                     </a>
                     <div class="hidden md:block ml-10">
                         <div class="flex items-center mt-2 space-x-4">
-                            <a href="#who-we-are" class="nav-item text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium relative">Who We Are</a>
-                            <a href="#lipsticks" class="nav-item text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium relative">Lipsticks</a>
-                            <a href="#jewellery" class="nav-item text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium relative">Jewellery</a>
-                            <a href="#foundation-shades" class="nav-item text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium relative">Foundation Shades</a>
-                            <a href="#blush" class="nav-item text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium relative">Blush</a>
+                            <a href="#who-we-are" class="nav-item text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Who We Are</a>
+                            <a href="#lipsticks" class="nav-item text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Lipsticks</a>
+                            <a href="#jewellery" class="nav-item text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Jewellery</a>
+                            <a href="#foundation-shades" class="nav-item text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Foundation Shades</a>
+                            <a href="#blush" class="nav-item text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium relative">Blush</a>
                         </div>
                     </div>
                 </div>
@@ -49,41 +49,27 @@
                 </div>
                 
                 <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
         </div>
 
-        <!-- Mobile menu, show/hide based on menu state -->
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#who-we-are" class="nav-item text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Who We Are</a>
-                <a href="#lipsticks" class="nav-item text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Lipsticks</a>
-                <a href="#jewellery" class="nav-item text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Jewellery</a>
-                <a href="#foundation-shades" class="nav-item text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Foundation Shades</a>
-                <a href="#blush" class="nav-item text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Blush</a>
-            </div>
-            <div class="px-2 pt-2 pb-3">
-                <div class="relative inline-block w-full">
-                    <!-- Main button -->
-                    <div class="w-full h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                        <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                    </div>
-                    <!-- Top white border -->
-                    <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                    <!-- Left white border -->
-                    <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                    <!-- Bottom shadow layers -->
-                    <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                    <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
+        <!-- Mobile menu -->
+        <nav id="mobile-menu" class="md:hidden fixed inset-y-0 right-0 w-64 bg-black transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="p-6">
+                <button id="close-mobile-menu" class="text-white text-2xl absolute top-4 right-4">&times;</button>
+                <div class="mt-8">
+                    <a href="#who-we-are" class="mobile-nav-item block text-white text-xl mb-4">Who We Are</a>
+                    <a href="#lipsticks" class="mobile-nav-item block text-white text-xl mb-4">Lipsticks</a>
+                    <a href="#jewellery" class="mobile-nav-item block text-white text-xl mb-4">Jewellery</a>
+                    <a href="#foundation-shades" class="mobile-nav-item block text-white text-xl mb-4">Foundation Shades</a>
+                    <a href="#blush" class="mobile-nav-item block text-white text-xl mb-4">Blush</a>
                 </div>
             </div>
-        </div>
+        </nav>
     </nav>
 
     <!-- Main Content -->
@@ -453,36 +439,6 @@
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
-        });
-    </script>
-
-    <!-- Add this style to your existing <style> tag or CSS file -->
-    <style>
-        .nav-item::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: white;
-            transition: width 0.3s ease;
-        }
-
-        .nav-item.active::after {
-            width: 100%;
-        }
-    </style>
-
-    <!-- Add this script to the end of your body tag -->
     
 </body>
 </html>

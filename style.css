@@ -109,3 +109,74 @@ button.custom-button:active {
   transform: scale(0.95);
 }
 
+
+    #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 80%; /* Adjust as needed */
+        max-width: 300px; /* Adjust as needed */
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        backdrop-filter: blur(10px); /* Glassmorphic effect */
+        z-index: 50;
+    }
+
+    #mobile-menu:not(.translate-x-full) {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-item {
+        display: block;
+        padding: 1rem;
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+    }
+
+    .mobile-nav-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Style for close button */
+    #close-mobile-menu {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Debug info styles */
+    #debug-info {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 0.5rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        z-index: 60;
+    }
+
+#mobile-menu {
+    transition: transform 0.3s ease-in-out;
+}
+
+#mobile-menu.translate-x-full {
+    transform: translateX(100%);
+}
+
+.mobile-nav-item {
+    transition: color 0.2s ease;
+}
+
+.mobile-nav-item:hover {
+    color: #ec4899; /* Tailwind's pink-500 */
+}

@@ -16,66 +16,90 @@ function getCurrentSection() {
 
 // Function to update active nav item
 function updateActiveNavItem() {
-    const currentSection = getCurrentSection();
-    const navItems = document.querySelectorAll('.nav-item');
+    const scrollPosition = window.scrollY;
 
-    navItems.forEach(item => {
-        if (item.getAttribute('href').slice(1) === currentSection) {
-            item.classList.add('active');
-        } else {
-            item.classList.remove('active');
+    document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            const navItems = document.querySelectorAll('.nav-item, .mobile-nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').slice(1) === section.id) {
+                    item.classList.add('active');
+                }
+            });
         }
     });
 }
 
 // Improved smooth scrolling function
-function smoothScroll(targetId, duration) {
+function smoothScroll(targetId) {
     const target = document.querySelector(targetId);
-    const targetPosition = target.getBoundingClientRect().top;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - 80; // Subtract 80px to account for fixed header
-    let startTime = null;
+    const headerOffset = 80;
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-    }
-
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t * t + b;
-        t -= 2;
-        return c / 2 * (t * t * t + 2) + b;
-    }
-
-    requestAnimationFrame(animation);
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
 }
 
 // Event listener for nav items
-document.addEventListener('DOMContentLoaded', () => {
-    const navItems = document.querySelectorAll('.nav-item');
+document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileMenu = document.getElementById('close-mobile-menu');
+    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+    const navItems = document.querySelectorAll('.nav-item, .mobile-nav-item');
+    const menuState = document.getElementById('menu-state');
 
+    function toggleMobileMenu() {
+        mobileMenu.classList.toggle('translate-x-full');
+        document.body.classList.toggle('menu-open');
+        
+        // Update debug info
+        if (mobileMenu.classList.contains('translate-x-full')) {
+            menuState.textContent = 'Open';
+        } else {
+            menuState.textContent = 'Closed';
+        }
+        
+        console.log('Menu toggled. State:', menuState.textContent);
+    }
+
+    // Toggle mobile menu
+    mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu
+    closeMobileMenu.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when a nav item is clicked
+    mobileNavItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            smoothScroll(targetId);
+            toggleMobileMenu();
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('translate-x-full')) {
+            toggleMobileMenu();
+        }
+    });
+
+    // Smooth scrolling for all nav items
     navItems.forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            smoothScroll(targetId, 1000); // 1000ms (1 second) duration for the scroll animation
-            
-            // Close mobile menu if it's open
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
+            smoothScroll(targetId);
         });
-    });
-
-    // Mobile menu functionality
-    mobileMenuButton.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
     });
 
     // Update active nav item on scroll
@@ -83,4 +107,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial call to set the active nav item
     updateActiveNavItem();
+
+    console.log('Script loaded and initialized');
 });
+
+// Smooth scrolling function (unchanged)
+function smoothScroll(targetId) {
+    const target = document.querySelector(targetId);
+    const headerOffset = 80;
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
+}
+
+// Update active nav item (unchanged)
+function updateActiveNavItem() {
+    const scrollPosition = window.scrollY;
+
+    document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            const navItems = document.querySelectorAll('.nav-item, .mobile-nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').slice(1) === section.id) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+}
