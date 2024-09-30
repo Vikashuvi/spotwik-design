@@ -12,7 +12,7 @@
 </head>
 <body class="bg-black min-h-screen">
     <!-- Navbar -->
-    <nav class="bg-black shadow-lg fixed top-0 left-0 right-0 z-50">
+    <nav class="bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg shadow-lg fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo and menu items on the left -->
@@ -22,34 +22,24 @@
                     </a>
                     <div class="hidden md:block ml-10">
                         <div class="flex items-center mt-2 space-x-4">
-                            <a href="#who-we-are" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative">Who We Are</a>
-                            <a href="#lipsticks" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative">Lipsticks</a>
-                            <a href="#jewellery" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative">Jewellery</a>
-                            <a href="#foundation-shades" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative">Foundation Shades</a>
-                            <a href="#blush" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative">Blush</a>
+                            <a href="#who-we-are" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative hover:text-gray-300 transition-colors duration-200">Who We Are</a>
+                            <a href="#lipsticks" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative hover:text-gray-300 transition-colors duration-200">Lipsticks</a>
+                            <a href="#jewellery" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative hover:text-gray-300 transition-colors duration-200">Jewellery</a>
+                            <a href="#foundation-shades" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative hover:text-gray-300 transition-colors duration-200">Foundation Shades</a>
+                            <a href="#blush" class="nav-item text-white px-3 py-2 rounded-md text-sm font-medium relative hover:text-gray-300 transition-colors duration-200">Blush</a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- "TRY NOW!" button on the right -->
                 <div class="hidden md:block">
-                    <div class="relative inline-block">
-                        <!-- Main button -->
-                        <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                            <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                        </div>
-                        <!-- Top white border -->
-                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                        <!-- Left white border -->
-                        <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                        <!-- Bottom shadow layers -->
-                        <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                        <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
-                    </div>
+                    <button class="px-6 py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase tracking-wide rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105">
+                        Try Now!
+                    </button>
                 </div>
                 
                 <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <button id="mobile-menu-button" class="md:hidden text-white bg-black">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
@@ -61,7 +51,7 @@
         <nav id="mobile-menu" class="md:hidden fixed inset-y-0 right-0 w-64 bg-black transform translate-x-full transition-transform duration-300 ease-in-out">
             <div class="p-6">
                 <button id="close-mobile-menu" class="text-white text-2xl absolute top-4 right-4">&times;</button>
-                <div class="mt-8">
+                <div class="mt-8 bg-black">
                     <a href="#who-we-are" class="mobile-nav-item block text-white text-xl mb-4">Who We Are</a>
                     <a href="#lipsticks" class="mobile-nav-item block text-white text-xl mb-4">Lipsticks</a>
                     <a href="#jewellery" class="mobile-nav-item block text-white text-xl mb-4">Jewellery</a>
@@ -83,19 +73,9 @@
                         <img src="./assets/model.png" alt="AR Shopping Experience" class="rounded-lg shadow-lg">
                         <h1 class="text-xl font-bold text-white">Bringing Trial Rooms to your Hands</h1>
                         <p class="text-xl text-gray-300">Leveraging AI & AR to Build the Future of Shopping!</p>
-                        <div class="relative inline-block">
-                            <!-- Main button -->
-                            <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                                <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                            </div>
-                            <!-- Top white border -->
-                            <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                            <!-- Left white border -->
-                            <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                            <!-- Bottom shadow layers -->
-                            <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                            <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
-                        </div>
+                        <button class="py-2 md:px-6 md:py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105 w-full">
+                            Try Now!
+                        </button>
                     </div>
                     
                     <!-- Desktop view (unchanged) -->
@@ -103,19 +83,9 @@
                         <div class="md:w-1/2 md:pr-8">
                             <h1 class="text-5xl font-bold text-white mb-4">Bringing Trial Rooms to your Hands</h1>
                             <p class="text-xl text-gray-300 mb-6">Leveraging AI & AR to Build the Future of Shopping!</p>
-                            <div class="relative inline-block">
-                                <!-- Main button -->
-                                <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                                    <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                                </div>
-                                <!-- Top white border -->
-                                <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                                <!-- Left white border -->
-                                <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                                <!-- Bottom shadow layers -->
-                                <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                                <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
-                            </div>
+                            <button class="px-6 py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase tracking-wide rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105">
+                                Try Now!
+                            </button>
                         </div>
                         <div class="md:w-1/2">
                             <img src="./assets/model.png" alt="AR Shopping Experience" class="w-full rounded-lg shadow-lg">
@@ -140,19 +110,9 @@
                         <li class="mb-2">Test number of lipstick shades in real-time.</li>
                         <li>No more guessing – find your ideal match with precision.</li>
                     </ul>
-                    <div class="relative inline-block">
-                        <!-- Main button -->
-                        <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                            <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                        </div>
-                        <!-- Top white border -->
-                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                        <!-- Left white border -->
-                        <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                        <!-- Bottom shadow layers -->
-                        <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                        <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
-                    </div>
+                    <button class=" py-2 md:px-0 md:py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase tracking-wide rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105">
+                        Try Now!
+                    </button>
                     <div class="flex items-center justify-center mt-8">
                         <span class="text-5xl font-bold text-white mr-2">01</span>
                         <span class="text-xl text-gray-400">/04</span>
@@ -180,19 +140,9 @@
                             <li class="mb-2">Test number of lipstick shades in real-time.</li>
                             <li>No more guessing – find your ideal match with precision.</li>
                         </ul>
-                        <div class="relative inline-block">
-                            <!-- Main button -->
-                            <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                                <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                            </div>
-                            <!-- Top white border -->
-                            <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                            <!-- Left white border -->
-                            <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                            <!-- Bottom shadow layers -->
-                            <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                            <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
-                        </div>
+                        <button class="px-6 py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase tracking-wide rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105">
+                            Try Now!
+                        </button>
                         <div class="flex items-center pl-[12rem]">
                             <span class="text-5xl font-bold text-white mr-2">01</span>
                             <span class="text-xl text-gray-400">/04</span>
@@ -222,13 +172,9 @@
                         <li class="mb-2">Try on necklaces, earrings, and more in seconds.</li>
                         <li>See how different styles complement your look without stepping into a store.</li>
                     </ul>
-                    <div class="relative inline-block">
-                        <!-- Main button -->
-                        <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                            <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                        </div>
-                        <!-- Button styling details... -->
-                    </div>
+                    <button class="px-2 py-2 md:px-6 md:py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase tracking-wide rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105 w-auto">
+                        Try Now!
+                    </button>
                     <div class="flex items-center justify-center mt-6">
                         <span class="text-5xl font-bold text-white mr-2">02</span>
                         <span class="text-xl text-gray-400">/04</span>
@@ -256,13 +202,9 @@
                             <li class="mb-2">Try on necklaces, earrings, and more in seconds.</li>
                             <li>See how different styles complement your look without stepping into a store.</li>
                         </ul>
-                        <div class="relative inline-block">
-                            <!-- Main button -->
-                            <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                                <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                            </div>
-                            <!-- Button styling details... -->
-                        </div>
+                        <button class="px-6 py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase tracking-wide rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105">
+                            Try Now!
+                        </button>
                         <div class="flex items-center mt-6">
                             <span class="text-5xl font-bold text-white mr-2">02</span>
                             <span class="text-xl text-gray-400">/04</span>
@@ -291,19 +233,9 @@
                     <li class="mb-2">Match foundation shades to your skin tone instantly.</li>
                     <li>Say goodbye to returns and wrong purchases.</li>
                 </ul>
-                <div class="relative inline-block">
-                    <!-- Main button -->
-                    <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                        <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                    </div>
-                    <!-- Top white border -->
-                    <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                    <!-- Left white border -->
-                    <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                    <!-- Bottom shadow layers -->
-                    <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                    <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
-                </div>
+                <button class="px-2 py-2 md:px-6 md:py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase tracking-wide rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105 w-auto">
+                    Try Now!
+                </button>
                 <div class="flex items-center justify-center mt-6">
                     <span class="text-5xl font-bold text-white mr-2">03</span>
                     <span class="text-xl text-gray-400">/04</span>
@@ -331,19 +263,9 @@
                         <li class="mb-2">Match foundation shades to your skin tone instantly.</li>
                         <li>Say goodbye to returns and wrong purchases.</li>
                     </ul>
-                    <div class="relative inline-block">
-                        <!-- Main button -->
-                        <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                            <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                        </div>
-                        <!-- Top white border -->
-                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                        <!-- Left white border -->
-                        <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                        <!-- Bottom shadow layers -->
-                        <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                        <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
-                    </div>
+                    <button class="px-6 py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase tracking-wide rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105">
+                        Try Now!
+                    </button>
                     <div class="flex items-center pl-[12rem]">
                         <span class="text-5xl font-bold text-white mr-2">03</span>
                         <span class="text-xl text-gray-400">/04</span>
@@ -371,19 +293,9 @@
                     <li class="mb-2">Choose the right blush for every makeup style.</li>
                     <li>See how each shade enhances your natural glow before buying.</li>
                 </ul>
-                <div class="relative inline-block">
-                    <!-- Main button -->
-                    <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                        <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                    </div>
-                    <!-- Top white border -->
-                    <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                    <!-- Left white border -->
-                    <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                    <!-- Bottom shadow layers -->
-                    <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                    <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
-                </div>
+                <button class="px-2 py-2 md:px-6 md:py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase tracking-wide rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105 w-auto">
+                    Try Now!
+                </button>
                 <div class="flex items-center justify-center mt-8">
                     <span class="text-5xl font-bold text-white mr-2">04</span>
                     <span class="text-xl text-gray-400">/04</span>
@@ -406,19 +318,9 @@
                         <li class="mb-2">Choose the right blush for every makeup style.</li>
                         <li>See how each shade enhances your natural glow before buying.</li>
                     </ul>
-                    <div class="relative inline-block">
-                        <!-- Main button -->
-                        <div class="w-40 h-10 bg-gradient-to-r from-orange-500 to-pink-600 flex items-center justify-center cursor-pointer">
-                            <span class="text-white font-bold text-sm uppercase tracking-wide">Try Now!</span>
-                        </div>
-                        <!-- Top white border -->
-                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-white opacity-70"></div>
-                        <!-- Left white border -->
-                        <div class="absolute top-0 left-0 bottom-0 w-[1px] bg-white opacity-70"></div>
-                        <!-- Bottom shadow layers -->
-                        <div class="absolute -bottom-1 left-0 right-0 h-[2px] bg-white opacity-20"></div>
-                        <div class="absolute -bottom-2 left-1 right-1 h-[2px] bg-white opacity-10"></div>
-                    </div>
+                    <button class="px-6 py-2 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm uppercase tracking-wide rounded-md transition-all duration-200 hover:shadow-lg hover:scale-105">
+                        Try Now!
+                    </button>
                     <div class="flex items-center mt-6">
                         <span class="text-5xl font-bold text-white mr-2">04</span>
                         <span class="text-xl text-gray-400">/04</span>

@@ -46,68 +46,7 @@ nav,
     }
 }
 
-@layer components {
-    .custom-button {
-      @apply bg-gradient-to-r from-[#FF8C00] to-[#FF1493] text-white font-bold py-3 px-6 rounded-lg text-lg uppercase tracking-wide shadow-md transition-all duration-300 ease-in-out;
-    }
-  
-    .custom-button:hover {
-      @apply transform -translate-y-1 shadow-lg;
-    }
-  
-    .custom-button:active {
-      @apply transform translate-y-0.5;
-    }
-  }
 
-button {
-  background: linear-gradient(to right, #FF6B00, #FF009E);
-  color: white;
-  font-family: 'League Spartan', sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: transform 0.1s ease;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-.custom-button,
-button.custom-button {
-  background: linear-gradient(to right, #FF6B00, #FF009E);
-  color: white;
-  font-family: 'League Spartan', sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: transform 0.1s ease;
-}
-
-.custom-button:hover,
-button.custom-button:hover {
-  transform: scale(1.05);
-}
-
-.custom-button:active,
-button.custom-button:active {
-  transform: scale(0.95);
-}
 
 
     #mobile-menu {
